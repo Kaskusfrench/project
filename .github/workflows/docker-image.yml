@@ -17,5 +17,5 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "snzyjr" --password-stdin
-        docker image build -t snzyjr/metris:v1 metrisan/
+        docker image build -t snzyjr/metris:v1 metrisan/Dockerfile
         docker push snzyjr/metris:v1$(date +%s)
